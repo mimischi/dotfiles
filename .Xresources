@@ -1,0 +1,21 @@
+Xft.dpi: 	140
+Xft.autohint: 	0
+Xft.lcdfilter:	lcddefault
+Xft.hintstyle:	hintfull
+Xft.hinting:	1
+Xft.antialias:	1
+Xft.rgba:	rgb
+
+! urxvt
+URxvt*background:	black
+URxvt*foreground:	white
+! Do not scroll on new output
+URxvt*scrollTtyOutput:		false
+URxvt*scrollWithBuffer:		true
+URxvt*scrollTtyKeypress:	true
+! Hide scrollbar
+URxvt*scrollBar:		false
+! Font settings
+URxvt.font: xft:Monospace:pixelsize=18:antialias=true:hinting=true
+! Decrease letter spacing
+URxvt.letterSpace:		-1
