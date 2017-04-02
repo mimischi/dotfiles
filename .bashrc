@@ -9,3 +9,5 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+eval "$(dircolors -b $HOME/.dir_colors/dircolors.256dark)"

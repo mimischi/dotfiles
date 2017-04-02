@@ -1,0 +1,38 @@
+#!/bin/sh
+lock() {
+    #i3lock -c 333333
+    #i3lock -i ~/img/archlinux-simplygrey-left_bottom.png
+    #i3lock -i ~/img/i3lock_black.png
+    i3lock
+}
+funlock() {
+    i3lock -u -p win -i ~/img/i3lock_fun.png
+}
+case "$1" in
+    lock)
+        lock
+        ;;
+    fun)
+        funlock
+        ;; 
+    logout)
+        i3-msg exit
+        ;;
+    suspend)
+        systemctl suspend
+        ;;
+    hibernate)
+        lock && systemctl hibernate
+        ;;
+    reboot)
+        systemctl reboot
+        ;;
+    shutdown)
+        systemctl poweroff
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+esac
+
+exit 0
