@@ -90,16 +90,16 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1: "
-set $workspace2 "2: "
-set $workspace3 "3: "
+set $workspace1 "1:  "
+set $workspace2 "2:  "
+set $workspace3 "3:  "
 set $workspace4 "4: "
-set $workspace5 "5: "
+set $workspace5 "5:  "
 set $workspace6 "6: "
 set $workspace7 "7: "
 set $workspace8 "8: "
-set $workspace9 "9: "
-set $workspace10: "10: "
+set $workspace9 "9:  "
+set $workspace10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -128,6 +128,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # Assign applications to specific workspaces
 assign [class="Firefox"] $workspace2
 assign [class="Emacs"] $workspace3
+assign [class="Slack"] $workspace9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -171,6 +172,7 @@ bar {
 			statusline	$mgrey
 			separator	$grey
 
+			# Type			border	bg	font
 			focused_workspace	$grey	$grey	$white
 			active_workspace	$grey	$grey	$mgrey
 			inactive_workspace	$grey	$grey	$mgrey
@@ -204,10 +206,24 @@ mode "$mode_system" {
 
 bindsym $mod+Control+Delete mode "$mode_system"
 
+# VPNC controls
+# Very preliminary. Just calls a certain bash alias
+set $vpnc_control VPN (c) connect, (d) disconnect
+mode "$vpnc_control" {
+    bindsym c exec "vpnmpi", mode "default"
+    bindsym d exec "sudo vpnc-disconnect", mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+v mode "$vpnc_control"
+
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5

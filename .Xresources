@@ -17,7 +17,7 @@ URxvt*scrollTtyKeypress:	true
 ! Hide scrollbar
 URxvt*scrollBar:		false
 ! Font settings
-URxvt.font: xft:Monospace:pixelsize=18:antialias=true:hinting=true
+URxvt.font: xft:Monospace:pixelsize=20:antialias=true:hinting=true
 ! Decrease letter spacing
 URxvt.letterSpace:		-1
 
