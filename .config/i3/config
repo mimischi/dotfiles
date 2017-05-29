@@ -190,6 +190,9 @@ client.urgent			$dark	$grey	$mgrey	$lgrey
 # Wallpaper
 exec --no-startup-id sh ~/.fehbg 
 
+# Compton
+exec_always compton -b --xrender-sync-fence
+
 # shutdown, reboot, lock script
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
