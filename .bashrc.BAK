@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+
 alias ls='ls --color=auto'
 alias ll='ls -lah'
 PS1='[\u@\h \W]\$ '
@@ -18,4 +20,8 @@ export VISUAL="$EDITOR"
 export ALTERNATE_EDITOR="vim"
 
 alias emacsc='emacsclient -nc'
+alias e='emacsc'
 alias vpnmpi='sudo vpnc vpnmpibp'
+alias remjup='ssh -N -f -L 8888:localhost:8888 tbsl'
+alias rs='rsync -avz --progress'
+export PATH="$HOME/.local/bin/anaconda3/bin:$PATH"
