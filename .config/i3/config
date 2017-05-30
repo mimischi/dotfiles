@@ -211,7 +211,7 @@ mode "$mode_system" {
 bindsym $mod+Control+Delete mode "$mode_system"
 
 # Autolock after some inactivity
-exec xautolock -time 3 -locker "~/.i3exit lock" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'Locking screen in 30 seconds'
+exec xautolock -time 3 -locker "~/.i3exit lock" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'Locking screen in 30 seconds'"
 
 # VPNC controls
 # Very preliminary. Just calls a certain bash alias
