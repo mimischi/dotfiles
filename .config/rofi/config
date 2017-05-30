@@ -10,7 +10,7 @@ rofi.color-window:	argb: ccffffff, argb: ccf5f5f5
 ! Separator style (none, dash, solid)
 rofi.separator-style:	solid
 
-rofi.font:		DejaVu Sans Mono 18
+rofi.font:		DejaVu Sans Mono 12
 rofi.case-sensitive:	false
 
 rofi.bw:		5
