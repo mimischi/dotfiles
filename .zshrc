@@ -1,6 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=~/.local/bin/anaconda3/bin:~/.node_modules/bin:$HOME/bin:/usr/local/bin:$PATH
 
+# NPM stuff, MG - 2017-06-07
+export PATH="$HOME/.node_modules/bin:$PATH"
+
+# Ruby stuff, MG - 2017-06-07
+export PATH="$HOME/.gem/ruby/2.4.0/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/mischi/.oh-my-zsh
 
@@ -51,7 +57,8 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker django common-aliases pass screen systemd emacs yarn)
+plugins=(git git-flow docker django common-aliases pass screen systemd emacs extract)
+>>>>>>> Add git-flow, ruby and node path, as well as travis gem
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,3 +102,6 @@ prompt_context(){}
 autoload -U bashcompinit
 bashcompinit
 eval "$(_PIPENV_COMPLETE=source pipenv)"
+
+# added by travis gem
+[ -f /home/mischi/.travis/travis.sh ] && source /home/mischi/.travis/travis.sh
