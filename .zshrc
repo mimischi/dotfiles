@@ -58,7 +58,6 @@ HYPHEN_INSENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-flow docker django common-aliases pass screen systemd emacs extract)
->>>>>>> Add git-flow, ruby and node path, as well as travis gem
 
 source $ZSH/oh-my-zsh.sh
 
