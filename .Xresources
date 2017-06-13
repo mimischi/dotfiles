@@ -10,7 +10,7 @@ Xft.rgba:	rgb
 !URxvt*background:	black
 !URxvt*foreground:	white
 ! Do not scroll on new output
-URxvt*termName:			rxvt-unicode-256color
+URxvt*termName:			rxvt-256color
 URxvt*scrollTtyOutput:		false
 URxvt*scrollWithBuffer:		true
 URxvt*scrollTtyKeypress:	true
