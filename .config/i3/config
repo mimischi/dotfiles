@@ -216,6 +216,9 @@ exec xautolock -time 3 -locker "~/.i3exit lock" -notify 30 -notifier "notify-sen
 # NetworkManager applet
 exec --no-startup-id nm-applet
 
+# udiskie
+exec --no-startup-id udiskie
+
 # VPNC controls
 # Very preliminary. Just calls a certain bash alias
 set $vpnc_control VPN (c) connect, (d) disconnect

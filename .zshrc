@@ -10,6 +10,8 @@ export PATH="$HOME/.gem/ruby/2.4.0/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH=/home/mischi/.oh-my-zsh
 
+export SCHRODINGER=/opt/schrodinger2017-2
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
