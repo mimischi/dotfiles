@@ -10,7 +10,7 @@ Xft.rgba:	rgb
 !URxvt*background:	black
 !URxvt*foreground:	white
 ! Do not scroll on new output
-URxvt*termName:			rxvt-256color
+URxvt*termName:			term-256color
 URxvt*scrollTtyOutput:		false
 URxvt*scrollWithBuffer:		true
 URxvt*scrollTtyKeypress:	true
@@ -18,9 +18,20 @@ URxvt*scrollTtyKeypress:	true
 URxvt*scrollBar:		false
 ! Font settings
 ! URxvt.font: xft:Monospace:pixelsize=20:antialias=true:hinting=true
-URxvt.font: xft:Monospace:pixelsize=14:antialias=true:hinting=true,xft:Inconsolata\ for\ Powerline:size=12
+URxvt.font: xft:Monospace:pixelsize=14:antialias=true:hinting=true,xft:Inconsolata\ for\ Powerline:size=12; xft:Noto Emoji
 ! Decrease letter spacing
 URxvt.letterSpace:		-1
+URxvt*loginShell:     true
+
+Xautolock.time: 30
+Xautolock.locker: $XDG_CONFIG_HOME/autolock.sh lock
+Xautolock.killtime: 30
+Xautolock.killer: $XDG_CONFIG_HOME/autolock.sh suspend
+Xautolock.notify: 30
+Xautolock.notifier: $XDG_CONFIG_HOME/autolock.sh notify
+Xautolock.detectsleep: true
+Xautolock.secure: true
+Xautolock.noclose: true
 
 ! Solarized color scheme for the X Window System
 !
