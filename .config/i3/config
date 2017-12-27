@@ -219,6 +219,12 @@ exec --no-startup-id nm-applet
 # udiskie
 exec --no-startup-id udiskie
 
+# Bluetooth System tray
+exec --no-startup-id blueberry-tray
+
+# PulseAudio System tray
+exec --no-startup-id pasystray
+
 # VPNC controls
 # Very preliminary. Just calls a certain bash alias
 set $vpnc_control VPN (c) connect, (d) disconnect
