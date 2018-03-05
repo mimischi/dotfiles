@@ -5,16 +5,11 @@ lock() {
     i3lock -u -i /tmp/lock.png
     rm /tmp/lock.png
 }
-funlock() {
-    i3lock -u -p win -i ~/img/i3lock_fun.png
-}
+
 case "$1" in
     lock)
-        lock
+        i3lock-fancy
         ;;
-    fun)
-        funlock
-        ;; 
     logout)
         i3-msg exit
         ;;
