@@ -220,7 +220,7 @@ mode "$mode_system" {
 bindsym $mod+Control+Delete mode "$mode_system"
 
 # Autolock after some inactivity
-exec xautolock -time 3 -locker "~/.i3exit lock" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'Locking screen in 30 seconds'"
+exec xautolock -time 3 -locker "~/.i3exit lock" -detectsleep -notify 30 -notifier "notify-send -u critical -t 10000 -- 'Locking screen in 30 seconds'"
 
 # NetworkManager applet
 exec --no-startup-id nm-applet
@@ -233,6 +233,12 @@ exec --no-startup-id blueberry-tray
 
 # PulseAudio System tray
 exec --no-startup-id pasystray
+
+# NextCloud
+exec --no-startup-id nextcloud
+
+# KeePassXC
+exec --no-startup-id keepassxc
 
 # VPNC controls
 # Very preliminary. Just calls a certain bash alias

@@ -37,6 +37,4 @@ export SSH_AUTH_SOCK
 
 # Set DPI and launch i3
 xrandr --dpi 109
-/usr/bin/nextcloud &
-/usr/bin/keepassxc &
 exec i3
