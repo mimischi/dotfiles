@@ -68,7 +68,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow docker django common-aliases pass screen systemd emacs extract)
+plugins=(git git-flow docker django common-aliases pass screen systemd extract emacs)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,10 +101,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -lah'
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias rs="rsync -avz --progress"
 alias vpnmpi='sudo vpnc vpnmpibp'
+
+# rebind `vim` and `vi` to our `emacs` alias
+alias vim="emacs"
+alias vi="emacs"
+
+# Set VISUAL and EDITOR to use emacs
+export VISUAL="emacs"
+export EDITOR="emacs"
 
 DEFAULT_USER=mischi
 prompt_context(){}
