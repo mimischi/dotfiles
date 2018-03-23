@@ -276,7 +276,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery2]
 type = custom/script
-exec = /home/mischi/.config/bin/battery.py
+exec = /home/mischi/.config/polybar/scripts/battery.py
 interval = 5
 
 [module/battery]
