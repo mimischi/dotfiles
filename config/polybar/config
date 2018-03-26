@@ -46,8 +46,8 @@ font-0 = System San Francisco Display:size=11;2
 font-1 = FontAwesome:size=11;2
 
 modules-left = i3
-modules-center = date
-modules-right = filesystem xbacklight volume memory cpu wlan eth battery battery2 temperature powermenu
+; modules-center = date
+modules-right = filesystem xbacklight volume memory cpu wlan eth battery battery2 temperature date
 ; modules-right = eth
 
 tray-position = right
